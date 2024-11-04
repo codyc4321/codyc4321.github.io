@@ -10,7 +10,6 @@
             bottom: 9%;
             left: 15%;
             right: 15%;
-            border: 2px solid;
         },
         .code {
             background: #f4f4f4;
@@ -81,5 +80,39 @@
                 def myfunction()):;
             </code>
         </pre>
+        <p>
+            It may be hard to read the entire stacktrace and determine where the data got corrupted by a logic error without lots of manual debugging. <br/>
+            Unit tests show us exactly where our program went wrong, giving you the test file, and the test that failed. <br/>
+            For an error, they show you what line of code is broken.
+        </p>
+        <p>
+            You may still do some manual debugging, but unit tests give you a much easier and more descriptive starting point, saving very much time longterm even though you invested time initially writing your tests.
+        </p>
+        <p>The 2 main Python testing frameworks are the built-in 'unittest' framework (PyUnit), and the 3rd-party Pytest</p>
+        <p>Pytest was created to overcome some shortcomings of unittest, primarily verbose assertion statements such as:</p>
+        <pre>
+            <code>
+                self.assertEqual(1, 1)
+            </code>
+        </pre>
+        <p>but with Pytest, we can do:</p>
+        <pre>
+            <code>
+                assert 1 == 1
+            </code>
+        </pre>
+        <p>
+            Pytest wraps the Python 'assert' keyword, and gives detailed error messages when a test fails.
+            Pytest also has colorized, human readable test failure output.
+        </p>
+        <p>
+            Pytest has spme important drawbacks as well, which made it not useful for my first project at Hit:
+        </p>
+        <ol>
+            <li>Pytest adds an external dependency with its own version number, bloating your project and requiring our security department to scan and review an additional 3rd party package</li>
+            <li>While very customizable, Pytest has a learning curve to get the most out of its use</li>
+            <li>Pytest test failure output is considered excessive and hard to read</li>
+        </ol>
+        <p>Mainly due to #1 and being asked to use as little dependencies as possible, I decided to stay with built in unittest</p>
     </div>
 </body>
