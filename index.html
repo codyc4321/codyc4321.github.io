@@ -49,11 +49,15 @@
             This allows you to work quickly and efficiently as the project grows, as making significant changes to a method written weeks ago
             only takes about 5-10 seconds to verify.
         </p>
-        <img src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/66bf0d346ebbbd1f1b3c18ee_636cc6291d31e72815868a5d_cost-of-fixing-issues.png" />
+        <div class="centered">
+            <img src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/66bf0d346ebbbd1f1b3c18ee_636cc6291d31e72815868a5d_cost-of-fixing-issues.png" />
+        <div/>
         <p>
             Well-written unit tests can save several hours of often tedious and frivolous manual testing per week, such as walking through the debugger or writing throwaway print statements.
         </p>
-        <img src="https://imgs.xkcd.com/comics/inexplicable.png"/>
+        <div class="centered">
+            <img src="https://imgs.xkcd.com/comics/inexplicable.png"/>
+        </div>
         <p>
             If a project grows into a very large and complex system, with numerous collaborators at the same time, unit tests can even save dozens,
             or hundreds of hours of time, with a very minimal amount of investment compared with how much time debugging would take 
@@ -65,12 +69,16 @@
         <p>
             The time unit tests save you can grow exponentionally as the project codebase grows rapidly.
         </p>
-        <img style="height: 500; width: 750;" src="https://cxdojo.com/wp-content/uploads/2022/04/benefits-of-unit-testing-1200x700.png" />
+        <div class="centered">
+            <img style="height: 500; width: 750;" src="https://cxdojo.com/wp-content/uploads/2022/04/benefits-of-unit-testing-1200x700.png" />
+        </div>
         <p>
             Unit tests are self-documenting: if the project gets moved to a new teammate for maintainence, they can become productive immediately
             by merely running your tests and seeing what they broke, or even just reviewing your tests as soon as they download the code.
         </p>
-        <img style="height: 500; width: 750;" src="https://miro.medium.com/v2/resize:fit:1400/1*Wtd1jCL3G5YBhfnpqHlkAw.png" />
+        <div class="centered">
+            <img style="height: 500; width: 750;" src="https://miro.medium.com/v2/resize:fit:1400/1*Wtd1jCL3G5YBhfnpqHlkAw.png" />
+        </div>    
         <p>
             This is because unit tests show a result, and an expectation, and the hard-coded expecation statements document what the method was intended to do.
         </p>
@@ -87,9 +95,13 @@
         </pre>
         <p>It may be hard to read the entire stacktrace and determine where the data got corrupted by a logic error without lots of manual debugging.</p>
         <p>Failures show us exactly where our program went wrong, giving you the test file, the test that failed, and the result vs expectation:</p>
-        <blockquote class="imgur-embed-pub" lang="en" data-id="G5uShrp"><a href="https://imgur.com/G5uShrp">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        <div class="centered">
+            <blockquote class="imgur-embed-pub" lang="en" data-id="G5uShrp"><a href="https://imgur.com/G5uShrp">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </div>
         <p>Errors show you what line of code is broken, and the stacktrace to get to that broken line of code:</p>
-        <blockquote class="imgur-embed-pub" lang="en" data-id="o0r87hx"><a href="https://imgur.com/o0r87hx">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        <div class="centered">
+            <blockquote class="imgur-embed-pub" lang="en" data-id="o0r87hx"><a href="https://imgur.com/o0r87hx">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </div>
         <p>
             You may still do some manual debugging, but unit tests give you a much easier and more descriptive starting point, saving very much time longterm even though you invested time initially writing your tests.
         </p>
