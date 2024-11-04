@@ -1,4 +1,8 @@
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <style>
         .container {
             position: absolute;
@@ -52,6 +56,23 @@
             If a project grows into a very large and complex system, with numerous collaborators at the same time, unit tests can even save dozens,
             or hundreds of hours of time, with a very minimal amount of investment compared with how much time debugging would take \
             if you didn't have tests.
+        </p>
+        <p>
+            Would you rather spend 1 hour writing creative tests and learning while documenting your code, or 3 hours of boring debugger walkthroughs?
+        </p>
+        <p>
+            The time unit tests save you can grow exponentionally as the project codebase grows rapidly.
+        </p>
+        <p>
+            Unit tests are self-documenting: if the project gets moved to a new teammate for maintainence, they can become productive immediately
+            by merely running your tests and seeing what they broke, or even just reviewing your tests as soon as they download the code.
+        </p>
+        <p>
+            This is because unit tests show a result, and an expectation, and the hard-coded expecation statements document what the method was intended to do.
+        </p>
+        <p>
+            Another key benefit of unit tests is that they help easily isolate errors. <br/>
+            Imagine running the entire project and receiving a string of errors. How would we go about debugging our code?
         </p>
     </div>
 </body>
