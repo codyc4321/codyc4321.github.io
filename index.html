@@ -50,7 +50,7 @@
             only takes about 5-10 seconds to verify.
         </p>
         <p>
-            Well-written unit test can save several hours often tedious and frivolous manual testing per week, such as walking through the debugger or writing throwaway print statements.
+            Well-written unit tests can save several hours of often tedious and frivolous manual testing per week, such as walking through the debugger or writing throwaway print statements.
         </p>
         <p>
             If a project grows into a very large and complex system, with numerous collaborators at the same time, unit tests can even save dozens,
@@ -74,5 +74,12 @@
             Another key benefit of unit tests is that they help easily isolate errors. <br/>
             Imagine running the entire project and receiving a string of errors. How would we go about debugging our code?
         </p>
+        <p>A test failure means the code can run, but the test result didn't match the expecation we gave the test.</p>
+        <p>An error running the tests means the code the test relies on actually cannot run, such as typos like:</p>
+        <pre>
+            <code>
+                def myfunction()):;
+            </code>
+        </pre>
     </div>
 </body>
