@@ -28,13 +28,13 @@
     </style>
 
     <script type="text/javascript">
-        
+
         var button_ids = ["unit-test-button", "beautiful-soup-button"];
 
         jQuery(document).ready(function(){
             $("#unit-test-button").bind("click", function() {
                 for (button_id in button_ids) {
-                    var this_button_id = button_ids[button_ids];
+                    var this_button_id = button_ids[button_id];
                     console.log(button_id);
                     console.log(this_button_id);
                     var this_element_id = this_button_id.replace("-button", "");
@@ -47,7 +47,7 @@
 
             $("#beautiful-soup-button").bind("click", function() {
                 for (button_id in button_ids) {
-                    var this_button_id = button_ids[button_ids];
+                    var this_button_id = button_ids[button_id];
                     var this_element_id = this_button_id.replace("-button", "");
                     var this_element_selector = "#" + this_element_id;
                     console.log(this_element_selector);
