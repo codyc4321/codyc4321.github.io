@@ -34,7 +34,19 @@
         }
         jQuery(document).ready(function(){
             $("#unit-test-button").bind("click", function() {
-                $("#unit-test").toggle();
+                for (button_id in button_ids) {
+                    var this_button = button_ids[button_ids];
+                    $("#" + this_button).hide();
+                }
+                $("#unit-test").show();
+            });
+
+            $("#beautiful-soup-button").bind("click", function() {
+                for (button_id in button_ids) {
+                    var this_button = button_ids[button_ids];
+                    $("#" + this_button).hide();
+                }
+                $("#beautiful-soup").show();
             })
 
         });
