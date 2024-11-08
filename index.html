@@ -28,8 +28,12 @@
     </style>
 
     <script type="text/javascript">
+        var button_ids = ["unit-test-button", "beautiful-soup-button"];
+        for (button_id in button_ids) {
+            console.log(button_id);
+        }
         jQuery(document).ready(function(){
-            $("#unit-test-button").bind("click", function(){
+            $("#unit-test-button").bind("click", function() {
                 $("#unit-test").toggle();
             })
 
@@ -42,6 +46,7 @@
     <div id="topmost">
         <div id="nav-buttons">
             <button id="unit-test-button">Unit Testing</button>
+            <button id="beautiful-soup-button">Beautiful Soup</button>
         </div>
         <div class="container" id="unit-test">
             <h1>Why unit testing?</h1>
@@ -158,6 +163,10 @@
                 <li>The conciseness of Pytest's tests can be a disadvantage, as verbose unittest statements can be easier to understand for new or younger developers</li>
             </ol>
             <p>Mainly due to #1 and being asked to use as little dependencies as possible, I decided to stay with built in unittest</p>
+        </div>
+
+        <div class="container" id="beautiful-soup">
+            <p>Beautiful soup lesson</p>
         </div>
     </div>
 </body>
