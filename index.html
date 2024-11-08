@@ -37,7 +37,9 @@
                 for (button_id in button_ids) {
                     var this_button_id = button_ids[button_ids];
                     var this_element_id = this_button_id.replace("-button", "");
-                    $("#" + this_element_id).hide();
+                    var this_element_selector = "#" + this_element_id;
+                    console.log(this_element_selector);
+                    $(this_element_selector).hide();
                 }
                 $("#unit-test").show();
             });
@@ -46,7 +48,9 @@
                 for (button_id in button_ids) {
                     var this_button_id = button_ids[button_ids];
                     var this_element_id = this_button_id.replace("-button", "");
-                    $("#" + this_element_id).hide();
+                    var this_element_selector = "#" + this_element_id;
+                    console.log(this_element_selector);
+                    $(this_element_selector).hide();
                 }
                 $("#beautiful-soup").show();
             })
