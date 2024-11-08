@@ -1,6 +1,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>hljs.highlightAll();</script>
 
     <style>
@@ -25,123 +26,138 @@
             padding-bottom: 100px;
         }
     </style>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            $("#unit-test-button").bind("click", function(){
+                $("unit-test").toggle();
+            })
+
+        });
+
+    </script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Why unit testing?</h1>
-        <p>Unit testing is a method for testing software that looks at the smallest testable pieces of code, called units, which are tested for correct operation.
-            By doing unit testing, we can verify that each part of the code, including helper functions that may not be exposed to the user,
-            works correctly and as intended.
-        </p>
+    <div id="topmost">
+        <div id="nav-buttons">
+            <button id="unit-test-button"></button>
+        </div>
+        <div class="container" id="unit-test">
+            <h1>Why unit testing?</h1>
+            <p>Unit testing is a method for testing software that looks at the smallest testable pieces of code, called units, which are tested for correct operation.
+                By doing unit testing, we can verify that each part of the code, including helper functions that may not be exposed to the user,
+                works correctly and as intended.
+            </p>
 
-        <p>
-            The idea is that we are independently checking each small piece of our program to ensure that it works.
-            This contrasts with integration and functional testing, which tests that the different parts of the program work well together and as intended.
-        </p>
-        <div class="centered">
-            <img src="https://cms-cdn.katalon.com/large_number_of_tests_in_unit_testing_integration_testing_and_acceptance_testing_88a3245529.png" />
-        </div> 
-        <p>
-            As the image above shows, unit tests are your foundation of testing. <br/>
-            Their advantage is they are easy to write and fast to execute, and you should have a lot of them covering the important pieces of your codebase.
-        </p>
-        <p>
-            Unit tests verify that the methods you write work as corrected in the future, mainly to allow you to make changes to the code and
-            automatically verify your code still works after you change it.
-        </p>
-        <div class="centered">
-            <img src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/66bf0d346ebbbd1f1b3c18ee_636cc6291d31e72815868a5d_cost-of-fixing-issues.png" />
-        </div>
-        <p>
-            This allows you to work quickly and efficiently as the project grows, as making significant changes to a method written weeks ago
-            only takes about 5-10 seconds to verify.
-        </p>
+            <p>
+                The idea is that we are independently checking each small piece of our program to ensure that it works.
+                This contrasts with integration and functional testing, which tests that the different parts of the program work well together and as intended.
+            </p>
+            <div class="centered">
+                <img src="https://cms-cdn.katalon.com/large_number_of_tests_in_unit_testing_integration_testing_and_acceptance_testing_88a3245529.png" />
+            </div> 
+            <p>
+                As the image above shows, unit tests are your foundation of testing. <br/>
+                Their advantage is they are easy to write and fast to execute, and you should have a lot of them covering the important pieces of your codebase.
+            </p>
+            <p>
+                Unit tests verify that the methods you write work as corrected in the future, mainly to allow you to make changes to the code and
+                automatically verify your code still works after you change it.
+            </p>
+            <div class="centered">
+                <img src="https://cdn.prod.website-files.com/619e15d781b21202de206fb5/66bf0d346ebbbd1f1b3c18ee_636cc6291d31e72815868a5d_cost-of-fixing-issues.png" />
+            </div>
+            <p>
+                This allows you to work quickly and efficiently as the project grows, as making significant changes to a method written weeks ago
+                only takes about 5-10 seconds to verify.
+            </p>
 
-        <h1>Benefits of unit testing</h1>
-        <div class="centered">
-            <img style="height: 300; width: 650;" src="https://cxdojo.com/wp-content/uploads/2022/04/benefits-of-unit-testing-1200x700.png" />
-        </div>
-        <p>
-            Well-written unit tests can save several hours of often tedious and frivolous manual testing per week, such as walking through the debugger or writing throwaway print statements.
-        </p>
-        <div class="centered">
-            <img src="https://imgs.xkcd.com/comics/inexplicable.png"/>
-        </div>
-        <p>
-            If a project grows into a very large and complex system, with numerous collaborators at the same time, unit tests can even save dozens,
-            or hundreds of hours of time, with a very minimal amount of investment compared with how much time debugging would take 
-            if you didn't have tests.
-        </p>
-        <p>
-            Would you rather spend 1 hour writing creative tests and learning while documenting your code, or 3 hours of boring debugger walkthroughs?
-        </p>
-        <p>
-            The time unit tests save you can grow exponentionally as the project codebase grows rapidly.
-        </p>
-        <p>
-            Unit tests are self-documenting: if the project gets moved to a new teammate for maintainence, they can become productive immediately
-            by merely running your tests and seeing what they broke, or even just reviewing your tests as soon as they download the code.
-        </p>
-        <div class="centered">
-            <img style="height: 300; width: 500;" src="https://miro.medium.com/v2/resize:fit:1400/1*Wtd1jCL3G5YBhfnpqHlkAw.png" />
-        </div>    
-        <p>
-            This is because unit tests show a result, and an expectation, and the hard-coded expecation statements document what the method was intended to do.
-        </p>
-        <p>
-            Another key benefit of unit tests is that they help easily isolate errors. <br/>
-            Imagine running the entire project and receiving a string of errors. How would we go about debugging our code?
-        </p>
+            <h1>Benefits of unit testing</h1>
+            <div class="centered">
+                <img style="height: 300; width: 650;" src="https://cxdojo.com/wp-content/uploads/2022/04/benefits-of-unit-testing-1200x700.png" />
+            </div>
+            <p>
+                Well-written unit tests can save several hours of often tedious and frivolous manual testing per week, such as walking through the debugger or writing throwaway print statements.
+            </p>
+            <div class="centered">
+                <img src="https://imgs.xkcd.com/comics/inexplicable.png"/>
+            </div>
+            <p>
+                If a project grows into a very large and complex system, with numerous collaborators at the same time, unit tests can even save dozens,
+                or hundreds of hours of time, with a very minimal amount of investment compared with how much time debugging would take 
+                if you didn't have tests.
+            </p>
+            <p>
+                Would you rather spend 1 hour writing creative tests and learning while documenting your code, or 3 hours of boring debugger walkthroughs?
+            </p>
+            <p>
+                The time unit tests save you can grow exponentionally as the project codebase grows rapidly.
+            </p>
+            <p>
+                Unit tests are self-documenting: if the project gets moved to a new teammate for maintainence, they can become productive immediately
+                by merely running your tests and seeing what they broke, or even just reviewing your tests as soon as they download the code.
+            </p>
+            <div class="centered">
+                <img style="height: 300; width: 500;" src="https://miro.medium.com/v2/resize:fit:1400/1*Wtd1jCL3G5YBhfnpqHlkAw.png" />
+            </div>    
+            <p>
+                This is because unit tests show a result, and an expectation, and the hard-coded expecation statements document what the method was intended to do.
+            </p>
+            <p>
+                Another key benefit of unit tests is that they help easily isolate errors. <br/>
+                Imagine running the entire project and receiving a string of errors. How would we go about debugging our code?
+            </p>
 
-        <h1>Test failures vs. errors in code</h1>
-        <p>A test failure means the code can run, but the test result didn't match the expecation we gave the test.</p>
-        <p>An error running the tests means the code the test relies on actually cannot run, such as typos like:</p>
-        <pre>
-            <code>
-                def myfunction()):;
-            </code>
-        </pre>
-        <p>It may be hard to read the entire stacktrace and determine where the data got corrupted by a logic error without lots of manual debugging.</p>
-        <p>Failures show us exactly where our program went wrong, giving you the test file, the test that failed, and the result vs expectation:</p>
-        <div class="centered">
-            <blockquote class="imgur-embed-pub" lang="en" data-id="G5uShrp"><a href="https://imgur.com/G5uShrp">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-        </div>
-        <p>Errors show you what line of code is broken, and the stacktrace to get to that broken line of code:</p>
-        <div class="centered">
-            <blockquote class="imgur-embed-pub" lang="en" data-id="o0r87hx"><a href="https://imgur.com/o0r87hx">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-        </div>
-        <p>
-            You may still do some manual debugging, but unit tests give you a much easier and more descriptive starting point, saving very much time longterm even though you invested time initially writing your tests.
-        </p>
+            <h1>Test failures vs. errors in code</h1>
+            <p>A test failure means the code can run, but the test result didn't match the expecation we gave the test.</p>
+            <p>An error running the tests means the code the test relies on actually cannot run, such as typos like:</p>
+            <pre>
+                <code>
+                    def myfunction()):;
+                </code>
+            </pre>
+            <p>It may be hard to read the entire stacktrace and determine where the data got corrupted by a logic error without lots of manual debugging.</p>
+            <p>Failures show us exactly where our program went wrong, giving you the test file, the test that failed, and the result vs expectation:</p>
+            <div class="centered">
+                <blockquote class="imgur-embed-pub" lang="en" data-id="G5uShrp"><a href="https://imgur.com/G5uShrp">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+            </div>
+            <p>Errors show you what line of code is broken, and the stacktrace to get to that broken line of code:</p>
+            <div class="centered">
+                <blockquote class="imgur-embed-pub" lang="en" data-id="o0r87hx"><a href="https://imgur.com/o0r87hx">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+            </div>
+            <p>
+                You may still do some manual debugging, but unit tests give you a much easier and more descriptive starting point, saving very much time longterm even though you invested time initially writing your tests.
+            </p>
 
-        <h1>Python testing frameworks</h1>
-        <p>The 2 main Python testing frameworks are the built-in 'unittest' framework (PyUnit), and the 3rd-party Pytest</p>
-        <p>Pytest was created to overcome some shortcomings of unittest, primarily verbose assertion statements such as:</p>
-        <pre>
-            <code>
-                self.assertEqual(1, 1)
-            </code>
-        </pre>
-        <p>but with Pytest, we can do:</p>
-        <pre>
-            <code>
-                assert 1 == 1
-            </code>
-        </pre>
-        <p>
-            Pytest wraps the Python 'assert' keyword, and gives detailed error messages when a test fails.
-            Pytest also has colorized, human readable test failure output.
-        </p>
-        <p>
-            Pytest has some important drawbacks as well, which made it not useful for my first project at Hit:
-        </p>
-        <ol>
-            <li>Pytest adds an external dependency with its own version number, bloating your project and requiring our security department to scan and review an additional 3rd party package</li>
-            <li>While very customizable, Pytest has a learning curve to get the most out of its use</li>
-            <li>Pytest test failure output is considered excessive and hard to read</li>
-            <li>The conciseness of Pytest's tests can be a disadvantage, as verbose unittest statements can be easier to understand for new or younger developers</li>
-        </ol>
-        <p>Mainly due to #1 and being asked to use as little dependencies as possible, I decided to stay with built in unittest</p>
+            <h1>Python testing frameworks</h1>
+            <p>The 2 main Python testing frameworks are the built-in 'unittest' framework (PyUnit), and the 3rd-party Pytest</p>
+            <p>Pytest was created to overcome some shortcomings of unittest, primarily verbose assertion statements such as:</p>
+            <pre>
+                <code>
+                    self.assertEqual(1, 1)
+                </code>
+            </pre>
+            <p>but with Pytest, we can do:</p>
+            <pre>
+                <code>
+                    assert 1 == 1
+                </code>
+            </pre>
+            <p>
+                Pytest wraps the Python 'assert' keyword, and gives detailed error messages when a test fails.
+                Pytest also has colorized, human readable test failure output.
+            </p>
+            <p>
+                Pytest has some important drawbacks as well, which made it not useful for my first project at Hit:
+            </p>
+            <ol>
+                <li>Pytest adds an external dependency with its own version number, bloating your project and requiring our security department to scan and review an additional 3rd party package</li>
+                <li>While very customizable, Pytest has a learning curve to get the most out of its use</li>
+                <li>Pytest test failure output is considered excessive and hard to read</li>
+                <li>The conciseness of Pytest's tests can be a disadvantage, as verbose unittest statements can be easier to understand for new or younger developers</li>
+            </ol>
+            <p>Mainly due to #1 and being asked to use as little dependencies as possible, I decided to stay with built in unittest</p>
+        </div>
     </div>
 </body>
